@@ -12,11 +12,15 @@ class Review(override val ticket: Ticket) : TicketState() {
     }
 
     override fun requestChanges() {
+        println("Änderungen wurden zum Ticket angefragt!")
         ticket.changeState(Rework(ticket))
+        println()
     }
 
     override fun close() {
         ticket.changeState(Done(ticket))
+        println("Ticket wurde geschlossen!")
+        println()
     }
 
     override fun toString(): String {

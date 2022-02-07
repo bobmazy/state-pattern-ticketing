@@ -3,7 +3,7 @@ package ticketing
 import ticketing.state.TicketState
 import ticketing.state.ToDo
 
-class Ticket(val id: Number, val title: String) {
+class Ticket(private val id: Number, private val title: String) {
     private var state: TicketState
 
 
@@ -28,7 +28,7 @@ class Ticket(val id: Number, val title: String) {
     }
 
     fun changeState(newState: TicketState) {
-        println("state change from $state to $newState")
+        println("Status vom Ticket GSO-$id $title hast sich von $state zu $newState geändert")
         state = newState
     }
 }

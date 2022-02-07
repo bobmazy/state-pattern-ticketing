@@ -4,7 +4,9 @@ import ticketing.Ticket
 
 class ToDo(override val ticket: Ticket) : TicketState() {
     override fun assign() {
+        println("Ticket wurde zugewiesen!")
         ticket.changeState(Doing(ticket))
+        println()
     }
 
     override fun implement() {
