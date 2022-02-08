@@ -1,7 +1,6 @@
 import ticketing.Ticket
 
 fun main() {
-    // state pattern
     val ticket = Ticket(1, "Docker Images erstellen")
 
     ticket.assign()

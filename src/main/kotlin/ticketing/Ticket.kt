@@ -28,7 +28,7 @@ class Ticket(private val id: Number, private val title: String) {
     }
 
     fun changeState(newState: TicketState) {
-        println("Status vom Ticket GSO-$id $title hast sich von $state zu $newState geändert")
+        println("Status vom Ticket 'GSO-$id $title' hast sich von $state zu $newState geändert")
         state = newState
     }
 }

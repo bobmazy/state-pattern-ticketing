@@ -8,7 +8,7 @@ class Rework(override val ticket: Ticket) : TicketState() {
     }
 
     override fun implement() {
-        println("Ticket wurde implementiert und zum reviewn freigegeben!")
+        println("Ticket wurde implementiert und für das Review freigegeben!")
         ticket.changeState(Review(ticket))
         println()
     }
